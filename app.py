@@ -31,7 +31,7 @@ similarity = pickle.load(open("models/similarity.pkl", "rb"))
 filmes = pd.DataFrame(dict_filmes)
 
 
-movie_list = filmes["title"].values
+movie_list = filmes["title"].sort_values(ascending = True).values
 select_movies = st.selectbox("Selecionando Filme", movie_list)
 
 ##Criando botão de recomendação
